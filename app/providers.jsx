@@ -1,11 +1,11 @@
 "use client";
-
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { useState } from "react";
 import { Toaster } from "react-hot-toast";
 
 const Providers = ({ children }) => {
-    const [queryClient] = React.useState(() => {
+    const [queryClient] = useState(() => {
         return new QueryClient({
             defaultOptions: {
                 // Refresh the data every 1 minute
